@@ -1,4 +1,4 @@
-﻿#include <windows.h>
+#include <windows.h>
 #include <stdlib.h>
 #include <string.h>
 #include <tchar.h>
@@ -139,8 +139,8 @@ VOID OnPaint(HDC hdc, RECT rect)
 
     LONG width = square.right - square.left;
     LONG height = square.bottom - square.top;
-
-    graphics.DrawImage(&bmp, (INT)((rect.right - rect.left - width) / 2), (rect.bottom - rect.top - height) / 2, square.left, square.top, width, height, UnitPixel);
+   
+    graphics.DrawImage(& bmp, (INT)((rect.right - rect.left - width) / 2), (rect.bottom - rect.top - height) / 2, square.left, square.top, width, height, UnitPixel);
 }
 
 
@@ -182,5 +182,5 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         break;
     }
 
-    return 0;
+    return 1;
 }
